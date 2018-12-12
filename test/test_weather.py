@@ -21,11 +21,3 @@ def test_library_creation(tmpdir):
     tmpdir.join(lib_name).rename(lib_name)
     # Delete temporary directory.
     tmpdir.join('..').remove()
-
-def test_create_file(tmpdir):
-    pdb.set_trace()
-    p = tmpdir.mkdir("sub").join("hello.txt")
-    p.write("content")
-    assert p.read() == "content"
-    assert len(tmpdir.listdir()) == 1
-    assert 0
